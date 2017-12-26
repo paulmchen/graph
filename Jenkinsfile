@@ -9,7 +9,7 @@ pipeline {
                 echo 'Building ...'
                 sh 'printenv'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                checkout scm
+                
                 sh 'mvn package'
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
