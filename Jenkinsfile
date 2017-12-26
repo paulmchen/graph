@@ -7,6 +7,7 @@ pipeline {
             steps {
                 sh 'mvn --version'
                 echo 'Building ...'
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 sh 'mvn package'
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
