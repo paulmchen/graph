@@ -33,7 +33,7 @@ pipeline {
     }
     post {
         failure {
-            mail to: chenp02@gmail.com, subject: 'The build ${env.BUILD_ID} failed on ${env.JENKINS_URL}'
+            echo "The build ${env.BUILD_ID} failed on ${env.JENKINS_URL}"
         }
     }
 }
