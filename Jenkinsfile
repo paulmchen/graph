@@ -27,7 +27,7 @@ pipeline {
             }
             steps {
                 echo 'deploying...'
-                mail to: chenp02@gmail.com, subject: 'Build ${env.BUILD_ID} on ${env.JENKINS_URL} success.'
+               
             }
         }
     }
