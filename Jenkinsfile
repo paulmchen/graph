@@ -8,12 +8,23 @@ pipeline {
                 sh 'mvn --version'
                 echo 'Building ...'
                 sh 'mvn package'
+                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
         }
         stage('test') {
             steps {
-                echo 'Testing ....'
+                echo 'Testing ...'
                 sh 'mvn test'
+            }
+        }
+        stage('Deploy') {
+            when {
+              expression {
+                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+              }
+            }
+            steps {
+                echo 'deployed...'
             }
         }
     }
