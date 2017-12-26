@@ -12,7 +12,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                echo 'Testing ...'
+                echo 'Testing ....'
                 sh 'mvn test'
             }
         }
