@@ -45,9 +45,10 @@ public class GraphTest {
 		// traverse the vertex
 		GraphIterator<String, DefaultWeightedEdge> iterator = 
                 new DepthFirstIterator<String, DefaultWeightedEdge>(hreWeightGraph);
-        while (iterator.hasNext()) {
-            System.out.println( iterator.next() );
-        }
+        
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
        
 	}
 
