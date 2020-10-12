@@ -15,8 +15,7 @@ public class Attraction {
 	 * @param name
 	 * @param weight
 	 */
-	public Attraction(String name, double weight) {
-	
+	public Attraction(String name, double weight) {	
 		this.name = name;
 		this.weight = weight;
 	}
@@ -41,5 +40,4 @@ public class Attraction {
 	public String toString() {
 		return  name + ":" + weight;
 	}
-	
 }
